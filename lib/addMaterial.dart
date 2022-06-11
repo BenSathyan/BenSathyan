@@ -1,10 +1,7 @@
-import 'dart:io';
 import 'package:extimation_app/dashBoard.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sqflite/sqflite.dart';
-
 import 'MobileDataBase/databaseHealper.dart';
 
 class AddMaterial extends StatefulWidget {
@@ -57,6 +54,7 @@ class _AddMaterialState extends State<AddMaterial> {
       List<Map> result = await db
           .rawQuery('SELECT * FROM $table WHERE $columnName=?', ['$material']);
       result.forEach((row) => {
+            // ignore: sdk_version_ui_as_code
             if (row[columnName].length != 0)
               {
                 repeated = true,
@@ -131,11 +129,8 @@ class _AddMaterialState extends State<AddMaterial> {
                     textAlign: TextAlign.center,
                     text: TextSpan(
                         text: 'Es',
-                        style: GoogleFonts.portLligatSans(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xffe46b10),
-                        ),
+                        style: TextStyle(
+                            color: Color(0xffe46b10), fontSize: 30),
                         children: [
                           TextSpan(
                             text: 'tima',

@@ -5,7 +5,6 @@ import 'package:extimation_app/viewCategory.dart';
 import 'package:extimation_app/viewMaterial.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'Choice.dart';
 import 'addCategory.dart';
 
@@ -146,12 +145,8 @@ class _DashBoardState extends State<DashBoard> {
                   textAlign: TextAlign.center,
                   text: TextSpan(
                       text: 'Es',
-                      style: GoogleFonts.portLligatSans(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xffe46b10),
-                      ),
-                      children: [
+                      style: TextStyle(
+                          color: Color(0xffe46b10), fontSize: 30),                      children: [
                         TextSpan(
                           text: 'tima',
                           style: TextStyle(color: Colors.black, fontSize: 30),

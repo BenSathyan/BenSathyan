@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTitle {
    title(BuildContext context) {
@@ -8,11 +7,6 @@ class AppTitle {
       textAlign: TextAlign.center,
       text: TextSpan(
           text: 'Re',
-          style: GoogleFonts.portLligatSans(
-            fontSize: 30,
-            fontWeight: FontWeight.w700,
-            color: Color(0xffe46b10),
-          ),
           children: [
             TextSpan(
               text: 'mind',

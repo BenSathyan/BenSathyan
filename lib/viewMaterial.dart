@@ -1,13 +1,9 @@
-import 'dart:io';
 import 'package:extimation_app/dashBoard.dart';
 import 'package:extimation_app/upadematerial.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sqflite/sqflite.dart';
-import 'Choice.dart';
 import 'MobileDataBase/databaseHealper.dart';
-import 'addCategory.dart';
 
 class EditMaterial {
   final cost;
@@ -117,12 +113,8 @@ class _ViewMaterialState extends State<ViewMaterial> {
                     textAlign: TextAlign.center,
                     text: TextSpan(
                         text: 'Es',
-                        style: GoogleFonts.portLligatSans(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xffe46b10),
-                        ),
-                        children: [
+                        style: TextStyle(
+                            color: Color(0xffe46b10), fontSize: 30),                        children: [
                           TextSpan(
                             text: 'tima',
                             style: TextStyle(color: Colors.black, fontSize: 30),
